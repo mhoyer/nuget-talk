@@ -103,7 +103,7 @@ a:focus {
 */
 
 h1 { font-size: 4em;   font-weight: bold; text-align: center; padding-left: 1em; }
-h2 { font-size: 2em; font-weight: bold; }
+h2 { font-size: 2em;   font-weight: bold; line-height: 0.9em; padding-bottom: 0.3em; }
 h3 { font-size: 1.5em; font-weight: bold; }
 
 .step {
