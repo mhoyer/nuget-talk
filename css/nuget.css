@@ -125,3 +125,44 @@ h3 { font-size: 1.5em; font-weight: bold; }
 .hint { color: #555; }
 
 #start { background: url('../images/nuget-symbol-256.png') no-repeat left center; }
+
+p { padding-left: 1em; }
+p img { vertical-align: sub; }
+
+.future,
+.past { 
+  opacity:0.05; 
+  -webkit-transition: 1.25s;
+  -moz-transition:    1.25s;
+  -ms-transition:     1.25s;
+  -o-transition:      1.25s;
+  transition:         1.25s;
+}
+
+.active { 
+  opacity:1; 
+  -webkit-transition: 1.25s;
+  -moz-transition:    1.25s;
+  -ms-transition:     1.25s;
+  -o-transition:      1.25s;
+  transition:         1.25s;
+}
+
+.impress-on-overview .future,
+.impress-on-overview .past { 
+  opacity:1; 
+  -webkit-transition: 1.25s;
+  -moz-transition:    1.25s;
+  -ms-transition:     1.25s;
+  -o-transition:      1.25s;
+  transition:         1.25s;
+}
+
+.next {
+  font-size: 0.6em;
+  color: #456;
+  text-align: right;
+  clear: both;
+}
+
+.left { float: left; }
