@@ -57,7 +57,6 @@ body {
     min-height: 740px;
     color: #eeeeff;
     background: #012;
-
 }
 
 code, pre {
@@ -102,7 +101,7 @@ a:focus {
     We start with basics to make sure it displays correctly in everywhere ...
 */
 
-h1 { font-size: 2em;   font-weight: bold; }
+h1 { font-size: 3em;   font-weight: bold; text-align: center; padding-left: 1em; }
 h2 { font-size: 1.4em; font-weight: bold; }
 h3 { font-size: 1.2em; font-weight: bold; }
 
@@ -123,3 +122,5 @@ h3 { font-size: 1.2em; font-weight: bold; }
 }
 
 .hint { color: #555; }
+
+#start { background: url('../images/nuget-symbol-256.png') no-repeat left center; }
