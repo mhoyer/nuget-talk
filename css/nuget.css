@@ -29,7 +29,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, code, pre {
+footer, header, hgroup, menu, nav, section, pre {
     display: block;
 }
 body {
@@ -55,7 +55,7 @@ table {
 body {
     font-family: 'Segoe UI', Verdana, sans-serif;
     min-height: 740px;
-    color: #eeeeff;
+    color: #eef;
     background: #012;
 }
 
@@ -72,6 +72,7 @@ code, pre {
 */
 b, strong { font-weight: bold }
 i, em { font-style: italic }
+small { font-size: 0.8em; color: #aab; }
 
 /*
     ... and give links a nice look.
@@ -101,13 +102,13 @@ a:focus {
     We start with basics to make sure it displays correctly in everywhere ...
 */
 
-h1 { font-size: 3em;   font-weight: bold; text-align: center; padding-left: 1em; }
-h2 { font-size: 1.4em; font-weight: bold; }
-h3 { font-size: 1.2em; font-weight: bold; }
+h1 { font-size: 4em;   font-weight: bold; text-align: center; padding-left: 1em; }
+h2 { font-size: 2em; font-weight: bold; }
+h3 { font-size: 1.5em; font-weight: bold; }
 
 .step {
     position: relative;
-    width: 900px;
+    width: 1000px;
     padding: 40px;
     margin: 20px auto;
 
