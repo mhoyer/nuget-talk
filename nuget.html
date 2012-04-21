@@ -47,7 +47,7 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="start" class="step slide" data-x="-1500" data-y="-1500" data-rotate="-10">
+    <div id="start" class="step slide" data-x="0" data-y="0" data-rotate="-20">
       <h1>NuGet</h1>
     </div>
 
@@ -55,7 +55,7 @@
         The `id` attribute of the step element is used to identify it in the URL, but it's optional.
         If it is not defined, it will get a default value of `step-N` where N is a number of slide.
     -->
-    <div id="what-is-nuget" class="step slide" data-x="0" data-y="-1500">
+    <div id="what-is-nuget" class="step slide">
       <h2>Was ist NuGet?</h2>
       
       <h3>Abh&auml;ngigkeiten, Versionierung, Bereitstellen</h3>
@@ -72,7 +72,7 @@
       </p>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
+    <div class="step slide">
       <h2>Pakete installieren</h2>
       <img src="images/package.png" class="left" />
       <p class="left">
@@ -87,7 +87,7 @@
       </p>
     </div>
 
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div class="step slide">
       <h2>Pakete erstellen</h2>
       <img src="images/cardbox.png" width="200" class="left" />
       <p class="left">
@@ -217,7 +217,7 @@ A.B.C(-pre).D
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="0" data-y="0" data-z="4000" data-rotate="0">
     </div>
 
 </div>
@@ -246,9 +246,27 @@ A.B.C(-pre).D
     Just sayin' ;)
     
 -->
-<div class="hint">
+<!--<div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
-</div>
+</div>-->
+<script>
+  var slides = document.querySelectorAll(".slide");
+  var radius = 1400;
+  var aspectRatio = 1.5;
+  var from = 30;
+  var to = 400;
+  
+  for(i=1;i<slides.length;i++) {
+    var angle = from + i*(to-from)/slides.length;
+    var angleRadians = Math.PI*angle/180;
+    
+    slides[i].setAttribute("data-x", aspectRatio * radius * Math.sin(angleRadians));
+    slides[i].setAttribute("data-y", radius * -Math.cos(angleRadians));
+    slides[i].setAttribute("data-rotate", angle-60);
+    // slides[i].setAttribute("data-rotate-x", 15);
+    // slides[i].setAttribute("data-rotate-y", 180+angle/2);
+  }
+</script>
 <script>
 if ("ontouchstart" in document.documentElement) { 
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -300,49 +318,3 @@ if ("ontouchstart" in document.documentElement) {
 
 </body>
 </html>
-
-<!--
-    
-    Now you know more or less everything you need to build your first impress.js presentation, but before
-    you start...
-    
-    Oh, you've already cloned the code from GitHub?
-    
-    You have it open in text editor?
-    
-    Stop right there!
-    
-    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
-    first needs to grow in your mind.
-    
-    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
-    
-    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
-    to present. It will get you closer and closer to the layout you'll build later with impress.js.
-    
-    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
-    it earlier, because you'll only waste your time fighting with positioning of useless points.
-    
-    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
-    creating awesome and engaging presentations.
-    
-    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
-    
--->
-
-<!--
-    
-    Are you still reading this?
-    
-    For real?
-    
-    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
-    to congratulate you personally :)
-    
-    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
-    or anything you like to drink. And raise a glass for me ;)
-    
-    Cheers!
-    
--->
-
