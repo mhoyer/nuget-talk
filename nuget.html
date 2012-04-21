@@ -93,9 +93,10 @@
       <img src="images/cardbox.png" width="200" class="left" />
       <p class="left">
         . <img src="images/cmd.exe.png" /> <code>nuget.exe spec</code><br />
-        . <img src="images/folder.png" /> Konventionen<br />
         . <code>&lt;/&gt;</code> Metadaten<br />
-        . <a href="http://nuget.codeplex.com/releases/view/59864">NuGet Package Explorer</a>
+        . <img src="images/folder.png" /> <a href="http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory" target="nuget-talk">Konventionen</a><br />
+        . <a href="http://nuget.codeplex.com/releases/view/59864" target="nuget-talk">NuGet Package Explorer</a><br />
+        . <img src="images/PowerShell.png" /> <a href="http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#Automatically_Running_PowerShell_Scripts_During_Package_Installation_and_Removal" target="nuget-talk">PowerShell</a>
       </p>
       
       <p class="next">
@@ -103,104 +104,130 @@
       </p>
     </div>
 
-    <div id="semver" class="step slide" data-x="0" data-y="-2500" data-rotate="90" data-z="1000">
+    <div id="semver" class="step slide">
       <h2 style="width: 1200px">Semantic Versioning</h2>
       <pre>
-A.B.C(-pre).D
-| | |   |   |
-| | |   |   +-- Build
+A.B.C(-pre)
+| | |   |  
 | | |   +------ (optional) Suffix
 | | +---------- Bugfix 
 | +------------ Minor  
 +-------------- Major</pre>
-      <a href="http://semver.org/">semver.org</a>
+
+      <a href="http://semver.org/" target="nuget-talk">semver.org</a>,
+      <a href="http://docs.nuget.org/docs/reference/versioning" target="nuget-talk">versioning @nuget.org</a>,<br />
+      <a href="http://blog.davidebbo.com/2011/01/nuget-versioning-part-1-taking-on-dll.html" target="nuget-talk">David Ebbos Blog Serie</a><br />
+      <small><a href="http://youtrack.jetbrains.com/issue/TW-21011" target="nuget-talk">Breaking changes in NuGet 1.7?</a></small>
       
       <p class="next">
         &gt;&gt; NuPack
       </p>
     </div>
-
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h2>impress.js<sup>*</sup></h2>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    
+    <div class="step slide">
+      <h2>Pakete packen &amp; ver&ouml;ffentlichen</h2>
+      <img src="images/cardbox-closed.png" width="180" class="left" />
+      <p class="left">
+        . <img src="images/cmd.exe.png" /> <code>nuget.exe pack</code><br />
+        . <img src="images/cmd.exe.png" /> <code>nuget.exe publish</code><br />
+        . <img src="images/nugetlogo.png" /> <small><a href="http://www.nuget.org/" target="nuget-talk">&gt;</a></small> <br />
+        . <img src="images/myget.png" /> <small><a href="http://www.myget.org/" target="nuget-talk">&gt;</a></small>
+      </p>
+      
+      <p class="next">
+        &gt;&gt; Choci
+      </p>
     </div>
 
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div class="step slide"
+         style="background: url('images/chocolatey-256.png') no-repeat top right">
+      <h2>Chocolatey</h2>
+
+      <h3>Paketverwaltung f&uuml;r Anwendungen</h3>
+
+      <a href="http://chocolatey.org/" target="nuget-talk">chocolatey.org</a>
+      
+      <p class="left">
+        . <q>It is kind of like apt-get, but for Windows</q><br />
+        . <q>Silently install apps, tools or set up things</q><br />
+        . <q>Update nearly everything .. with few keystrokes</q>
+      </p>
+
+      <p class="next">
+        &gt;&gt; Tuna
+      </p>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div class="step slide">
+      <h2>Albacore</h2>
+      
+      <h3>Rake tasks f&uuml;r .NET</h3>
+      
+      <a href="http://albacorebuild.net/" target="nuget-talk">
+        <img src="images/albacorebuild.png" class="left" />
+      </a>
+      
+      <p class="left">
+        <small>&lt;&lt;click the fish</small><br />
+        . <a href="https://github.com/derickbailey/Albacore/wiki/Nuspec-Task" target="nuget-talk">Nuspec</a><br />
+        . <small><a href="https://github.com/derickbailey/Albacore/wiki/NuGetPack-Task" target="nuget-talk">NuGetPack</a></small><br />
+        . <small><a href="https://github.com/derickbailey/Albacore/wiki/NuGetPush-Task" target="nuget-talk">NuGetPush</a></small><br />
+        . <small><a href="https://github.com/derickbailey/Albacore/wiki/NuGetPublish-Task" target="nuget-talk">NuGetPublish</a></small><br />
+      </p>
+      
+      <p class="next">
+        &gt;&gt; CI
+      </p>
     </div>
 
-    <!--
-        
-        And now it gets really exiting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+    <div class="step slide">
+      <h2>TeamCity</h2>
+      
+      <h3>Packen und Bereitstellen</h3>
+      
+      <a href="http://www.jetbrains.com/teamcity/" target="nuget-talk">
+        <img src="images/teamcity512.png" width="200" class="left" />
+      </a>
+      
+      <p class="left">
+        <a href="http://localhost:8080/" target="nuget-talk">DEMO</a>
+      </p>
+      
+      <p class="next">
+        &gt;&gt; ext
+      </p>
     </div>
 
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div class="step slide">
+      <h2>Erweiterbarkeit</h2>
+      
+      <a href="http://www.codeplex.com/MEF" target="nuget-talk">
+        <img src="images/MEF.png" width="200" class="left" />
+      </a>
+      
+      <p>
+        . <a href="http://devlicio.us/blogs/rob_reynolds/archive/2011/07/15/extend-nuget-command-line.aspx" target="nuget-talk">NuGet.Commands</a><br />
+      </p>
+
+      <pre style="clear: both">copy MyGlitteringNuGetExtension.dll
+     %LocalAppData%\NuGet\Commands\</pre>
+      
+      <p class="next">
+        &gt;&gt; rest
+      </p>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+    <div class="step slide">
+      <h2>Ideen und Ressourcen</h2>
+      
+      <p>
+        . <a href="http://ihadthisideaonce.wordpress.com/2012/02/29/manage-your-mef-parts-with-nuget/" target="nuget-talk">Manage MEF with NuGet</a><br />
+        . <a href="http://msdn.microsoft.com/en-us/library/7wd6ex19%28v=vs.71%29.aspx" target="nuget-talk">Redirecting Assembly Versions</a><br />
+      </p>
+      
+      <p class="next">
+        FIN
+      </p>
     </div>
 
     <!--
